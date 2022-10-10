@@ -26,6 +26,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+########### TEACHER ##########
+#       - name: Generate tarball from image
+#         run: |
+#           docker pull nginx:latest
+#           docker save -o vunl-image.tar nginx:latest
+          
+#           THEN RUN TARBALL
+        #######
+
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
@@ -37,3 +46,5 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results.sarif'
+
+
