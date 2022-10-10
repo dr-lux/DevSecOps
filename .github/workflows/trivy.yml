@@ -27,10 +27,10 @@ jobs:
         uses: actions/checkout@v3
 
 ########### TEACHER ##########
-      - name: Generate tarball from image
-        run: |
-          docker pull nginx:latest
-          docker save -o vunl-image.tar nginx:latest          
+#       - name: Generate tarball from image
+#         run: |
+#           docker pull nginx:latest
+#           docker save -o vunl-image.tar nginx:latest          
         #######
 
       - name: Run Trivy vulnerability scanner
